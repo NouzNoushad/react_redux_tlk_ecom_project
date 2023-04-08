@@ -1,0 +1,25 @@
+{
+  "cart": [
+    {
+      "image": "silver_shirt.webp",
+      "name": "Silver Shirt",
+      "price": "350",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum exercitationem, iure quam doloribus consectetur quaerat.",
+      "id": 1
+    },
+    {
+      "image": "silver_jacket.webp",
+      "name": "Silver Jacket",
+      "price": "300",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum exercitationem, iure quam doloribus consectetur quaerat.",
+      "id": 2
+    },
+    {
+      "image": "t_shirt.webp",
+      "name": "T Shirt",
+      "price": "250",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum exercitationem, iure quam doloribus consectetur quaerat.",
+      "id": 3
+    }
+  ]
+}

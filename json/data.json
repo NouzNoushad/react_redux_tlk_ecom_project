@@ -1,0 +1,47 @@
+{
+	"products": [
+		{
+			"id": 1,
+			"image": "silver_jacket.webp",
+			"name": "Silver Jacket",
+			"price": 300,
+			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum exercitationem, iure quam doloribus consectetur quaerat."
+		},
+		{
+			"id": 2,
+			"image": "silver_shirt.webp",
+			"name": "Silver Shirt",
+			"price": 350,
+			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum exercitationem, iure quam doloribus consectetur quaerat."
+		},
+		{
+			"id": 3,
+			"image": "t_shirt.webp",
+			"name": "T Shirt",
+			"price": 250,
+			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum exercitationem, iure quam doloribus consectetur quaerat."
+		},
+		{
+			"id": 4,
+			"image": "nike_shoe1.jpg",
+			"name": "Nike Shoe",
+			"price": 100,
+			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum exercitationem, iure quam doloribus consectetur quaerat."
+		},
+		{
+			"id": 5,
+			"image": "nike_shoe2.jpeg",
+			"name": "Nike Shoe",
+			"price": 120,
+			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum exercitationem, iure quam doloribus consectetur quaerat."
+		},
+		{
+			"id": 6,
+			"image": "nike_shoe3.jpg",
+			"name": "Nike Shoe",
+			"price": 150,
+			"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum exercitationem, iure quam doloribus consectetur quaerat."
+		}
+		
+	]
+}
