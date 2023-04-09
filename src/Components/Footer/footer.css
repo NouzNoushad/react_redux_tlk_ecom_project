@@ -1,0 +1,11 @@
+.footer-links {
+	display: flex;
+	list-style: none;
+	justify-content: space-evenly;
+}
+
+.footer-links a {
+	text-decoration: none;
+	color: white;
+	font-size: 0.9rem;
+}

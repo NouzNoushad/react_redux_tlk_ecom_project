@@ -19,7 +19,7 @@ const Header = () => {
 								<Nav.Link href="/">Home</Nav.Link>
 								<Nav.Link href="/cart">Cart</Nav.Link>
 								<Nav.Link href='/signup'>Sign Up</Nav.Link>
-								<Nav.Link href='#action4'>Login</Nav.Link>
+								<Nav.Link href='/login'>Login</Nav.Link>
 						</Nav>
 				</Navbar.Collapse>
 				</Container>

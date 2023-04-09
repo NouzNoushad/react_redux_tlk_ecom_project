@@ -1,7 +1,7 @@
 import { Card, Container, Row, Col, Form, Button } from "react-bootstrap";
 import "./sign_up.css";
 import { useFormik } from "formik";
-import { signUpSchema } from "../../Schema";
+import { signUpSchema } from "../../Schema/signup_schema";
 
 const SignUp = () => {
 
@@ -42,7 +42,7 @@ const SignUp = () => {
 	})
 
 	return ( 
-		<Container className="my-4">
+		<Container id="signup-section" className="my-4">
 			<Row>
 				<Col lg={6} className="m-auto">
 					<Card className="bg-dark text-light">

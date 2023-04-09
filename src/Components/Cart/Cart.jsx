@@ -37,7 +37,7 @@ const Cart = () => {
 		fetch(url)
 			.then(res => {
 				if (!res.ok) {
-					throw Error('could not fetch users data');
+					throw Error('could not fetch cart data');
 				}
 				return res.json();
 			})
