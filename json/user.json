@@ -17,6 +17,18 @@
       "email": "mario@gmail.com",
       "password": "123456",
       "id": "yfbje3L"
+    },
+    {
+      "name": "yoshi",
+      "email": "yoshi@gmail.com",
+      "password": "123456",
+      "id": "vs6c7OK"
+    },
+    {
+      "name": "browser",
+      "email": "browser@gmail.com",
+      "password": "123456",
+      "id": "nhosAhz"
     }
   ]
 }

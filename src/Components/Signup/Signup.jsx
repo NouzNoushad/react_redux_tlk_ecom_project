@@ -2,6 +2,9 @@ import { Card, Container, Row, Col, Form, Button } from "react-bootstrap";
 import "./sign_up.css";
 import { useFormik } from "formik";
 import { signUpSchema } from "../../Schema/signup_schema";
+import { useDispatch } from "react-redux";
+import { registerUser } from "../../Redux/actions";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
 
@@ -12,32 +15,22 @@ const SignUp = () => {
 		confirm_password: ""
 	}
 
+	const dispatch = useDispatch()
+	const navigate = useNavigate()
+
 	const saveToUsersList = (name, email, password) => {
-		const users = { "name": name, "email": email, "password": password }
-		console.log(users)
-		
-		fetch('http://localhost:4000/users', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json'
-			},
-			body: JSON.stringify(users)
-		})
-			.then(() => {
-			console.log('User data has saved Successfully')
-			})
-			.catch((err) => {
-			console.log('Failed to save user data')
-		})
+		const user = { "name": name, "email": email, "password": password }
+		dispatch(registerUser(user))
 	}
 
-	const {values, errors, touched, handleBlur, handleChange, handleSubmit} = useFormik({
+	const {values, errors, touched, handleChange, handleSubmit} = useFormik({
 		initialValues,
 		validationSchema: signUpSchema,
 		onSubmit: (values, action) => {
 			console.log(values.name)
 			saveToUsersList(values.name, values.email, values.password)
 			action.resetForm()
+			navigate('/login')
 		}
 	})
 

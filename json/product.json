@@ -13,13 +13,6 @@
       "price": "300",
       "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum exercitationem, iure quam doloribus consectetur quaerat.",
       "id": 2
-    },
-    {
-      "image": "t_shirt.webp",
-      "name": "T Shirt",
-      "price": "250",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum exercitationem, iure quam doloribus consectetur quaerat.",
-      "id": 3
     }
   ]
 }
