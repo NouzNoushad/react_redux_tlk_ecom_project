@@ -1,12 +1,13 @@
 import { useEffect, useReducer, useState } from 'react';
 import { Card, Col, Row, Container,Button } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart, getProducts } from '../../Redux/actions';
+import { addToCart } from '../../Redux/cartSlice';
+import { getProducts } from '../../Redux/productSlice';
 
 const Products = () => {
 
 	let dispatch = useDispatch()
-	const { products } = useSelector((state) => state.products)
+	const { loading, products, error} = useSelector((state) => state.products)
 
 	const handleAddToCart = (product) => {
 
@@ -23,6 +24,8 @@ const Products = () => {
 	return ( 
 		<Container className='my-4'>
 			<Row xs={1} md={3} className="g-4">
+				{loading ? (<div className='mt-4'>Loading...</div>) : null}
+				{ error ? {error} : null}
 				{products.length ? products.map((product) => (
 				<Col key={product.id}>
 					<Card>
@@ -35,7 +38,7 @@ const Products = () => {
 						</Card.Body>
 					</Card>
 				</Col>
-				)) : (<div className='mt-4'>Loading...</div>)}
+				)) : null}
 				
 			</Row>
 		</Container>

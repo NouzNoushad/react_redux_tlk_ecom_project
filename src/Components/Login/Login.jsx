@@ -1,11 +1,12 @@
 import { Card, Container, Row, Col, Form, Button } from "react-bootstrap";
 import { useFormik } from "formik";
 import { loginSchema } from "../../Schema/login_schema";
-import { useReducer, useEffect } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./login.css"
 import { useDispatch, useSelector } from "react-redux";
-import { getUsers } from "../../Redux/actions";
+import { getUsers } from "../../Redux/userSlice";
+
 
 const Login = () => {
 
@@ -15,19 +16,19 @@ const Login = () => {
 	}
 
 	const navigate = useNavigate()
-	let {users} = useSelector((state) => state.usersData)
+	let {users} = useSelector((state) => state.user)
 	let dispatch = useDispatch()
 
 	useEffect(() => {
 		dispatch(getUsers())
-	}, [])
+	}, [dispatch])
 
-	const {values, errors, touched, handleBlur, handleChange, handleSubmit} = useFormik({
+	const {values, errors, touched, handleChange, handleSubmit} = useFormik({
 		initialValues,
 		validationSchema: loginSchema,
 		onSubmit: (values, action) => {
 			const isUser = users.filter((user) => {
-				return user.email == values.email && user.password == values.password;
+				return user.email === values.email && user.password === values.password;
 			})
 			if (isUser.length > 0) {
 				navigate('/')

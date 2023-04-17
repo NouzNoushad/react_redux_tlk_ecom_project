@@ -2,9 +2,9 @@ import { Card, Container, Row, Col, Form, Button } from "react-bootstrap";
 import "./sign_up.css";
 import { useFormik } from "formik";
 import { signUpSchema } from "../../Schema/signup_schema";
-import { useDispatch } from "react-redux";
-import { registerUser } from "../../Redux/actions";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { registerUser } from "../../Redux/userSlice";
 
 const SignUp = () => {
 

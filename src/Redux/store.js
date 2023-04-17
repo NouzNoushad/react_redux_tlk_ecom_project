@@ -1,13 +1,14 @@
-import { createStore, applyMiddleware } from "redux"
-import rootReducer from "./rootReducer"
-import reduxThunk from "redux-thunk"
-import logger from "redux-logger"
+import { configureStore } from "@reduxjs/toolkit"
+import cartSlice from "./cartSlice"
+import productSlice from "./productSlice"
+import userSlice from "./userSlice"
 
-const middleware = [reduxThunk]
+const store = configureStore({
+	reducer: {
+		products: productSlice,
+		cart: cartSlice,
+		user: userSlice
+	}
+})
 
-if (process.env.NODE_ENV === "development") {
-	middleware.push(logger)
-}
-
-const store = createStore(rootReducer, applyMiddleware(...middleware))
 export default store
